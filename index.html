@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head lang="en"> 
+    <meta charset="UFT-8">
+    <meta http-equiv="X-UA-Compatibles" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+        <!-- CSS IMPORT  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <!-- API IMPORT  -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="AI2API\Ai2APImain.js"></script> 
+        <script src="API_AI9.js"></script>
+
+        <script src="condition_predict.js"></script>
+        <script src="setup_condition.js"></script>
+
+        <script src="Speech_to_Text.js"></script>
+         
+</head>
+<body>
+
+    <div class="center-image resize-image">
+        <img src="Animation\001-doctor.png">
+      </div>
+
+    <input id="input_value" type="text" placeholder="กรอกคอมเม้นที่นี่"><br>
+    <button id="nametype" class="input_button" onclick='predict_asdserve(document.getElementById("input_value").value)'>ส่งข้อความ</button>
+
+    <p id="response_text_input" class="result_settext"></p>
+    <p id="response_text_output"><br><br></p>
+
+    <br>
+    <button style="font-size:75px" class="mic mic-button fa-microphone fa" aria-hidden="true" onclick="STT()">  
+        <p style="font-size:15px" class="settext" id="Text_Start_MIC">START</p>
+    </button>
+
+</body>
